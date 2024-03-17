@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  /* default */
+  --color-dark: #0b0d17;
+  --color-dark-rgb: 11, 13, 23;
+  --color-purple: #d0d6f9;
+  --color-purple-rgb: 208, 214, 249;
+  --color-white: #fff;
+  --color-dark-rgb: 255, 255, 255;
+
+  --h1-size: 150px;
+  --h2-size: 100px;
+  --h3-size: 56px;
+  --h4-size: 32px;
+  --h5-size: 28px;
+  --h5-spacong: 4.75;
+  --sub-h1-size: 28px;
+  --sub-h2-size: 14px;
+  --sub-h2-space: 2.35;
+  --nav-size: 16px;
+  --nav-space: 2.7;
+  --body-size: 18px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+header,
+header * {
+  transition: 0.4s ease-in-out;
+}
+.menu-list {
+  position: relative;
+  backdrop-filter: blur(32px);
+}
+.line {
+  position: relative;
+  margin-right: -2%;
+  width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+.world {
+  width: 954px !important;
+  height: auto !important;
+  top: auto !important;
+  left: auto !important;
+  right: 0 !important;
+  bottom: -7% !important;
+}
+.world.star-mobile {
+  bottom: 0 !important;
+}
+.bg-mobile, .bg-tablet {
+  height: auto !important;
+}
+.space {
+  top: auto !important;
+  bottom: 0 !important;
+}
+@media (max-width: 768.98px) {
+  .menu-list .menu-item span,
+  .line {
+    display: none;
+  }
+}
+@media (max-width: 576.98px) {
+  .menu-list {
+    display: none;
+  }
+}
