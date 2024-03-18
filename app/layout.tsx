@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Bellefair, Barlow_Condensed } from "next/font/google";
+import { Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/mainHeader/header";
+import Header from "@/components/header/header";
 
-// const bellefair = Bellefair({ subsets: ["latin"], weight: "400" });
 const barlow = Barlow_Condensed({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
@@ -22,17 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlow.className} relative bg-[#0B0D17] w-screen h-screen overflow-hidden`}
+        className={`${barlow.className} relative bg-[#0B0D17] w-screen h-screen overflow-hidden flex`}
       >
         <Header />
         {children}
+        {/* Background */}
         <div className="background absolute top-0 left-0 right-0 bottom-0 w-full h-full z-[-2] mix-blend-lighten">
           <Image
             src={"/bg.png"}
             alt=""
             width={486}
             height={1024}
-            className="hidden md:flex absolute top-0 mix-blend-lighten bg-desktop w-auto h-auto"
+            className="hidden md:flex absolute top-0 mix-blend-lighten bg-desktop h-auto"
             priority
           />
           <Image

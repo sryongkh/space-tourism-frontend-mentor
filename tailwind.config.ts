@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        "primary": "#0B0D17",
+      },
       backgroundImage: {
         "gradient-default": "url('../public/bg.png')",
         "gradient-conic":
@@ -46,6 +49,9 @@ const config: Config = {
       },
       lineHeight: {
         "normal": "normal"
+      },
+      boxShadow: {
+        "star": "0 8px 72px rgba(96, 96, 96, 0.1)"
       }
     },
   },
