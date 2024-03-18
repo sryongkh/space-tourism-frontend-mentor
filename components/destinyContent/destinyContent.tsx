@@ -1,9 +1,16 @@
+"use client";
 import React from "react";
-
-const DestinyContent = () => {
+export interface DestinationPath {
+  destination: string;
+}
+const DestinyContent: React.FC<DestinationPath> = ({ destination }) => {
+  const [currentDestination, setCurrentDestination] =
+    React.useState(destination);
   return (
     <div className="flex flex-col">
-      <h2 className="font-bellefair text-h2 uppercase my-9">Moon</h2>
+      <h2 className="font-bellefair text-h2 uppercase my-9">
+        {currentDestination}
+      </h2>
       <p className="leading-8 text-purple text-bodytxt pb-7">
         See our planet as you’ve never seen it before. A perfect relaxing trip
         away to help regain perspective and come back refreshed. While you’re
