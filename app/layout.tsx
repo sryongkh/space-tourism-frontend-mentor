@@ -32,7 +32,7 @@ export default function RootLayout({
             alt=""
             width={486}
             height={1024}
-            className="hidden md:flex absolute top-0 mix-blend-lighten"
+            className="hidden md:flex absolute top-0 mix-blend-lighten bg-desktop w-auto h-auto"
             priority
           />
           <Image

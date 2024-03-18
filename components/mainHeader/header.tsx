@@ -6,16 +6,13 @@ const Header = () => {
     <>
       <header className="absolute top-0 md:top-10 left-0 w-full h-24 flex justify-between items-center pl-6 xs:pl-10 md:pl-16">
         <div className="mr-0 md:mr-16">
-          <Link href="/" className="logo flex relative w-10 xs:w-12 h-10 xs:h-12">
-            <Image
-              src={"logo.svg"}
-              alt=""
-              fill
-              priority
-            />
+          <Link
+            href="/"
+            className="logo flex relative w-10 xs:w-12 h-10 xs:h-12"
+          >
+            <Image src={"logo.svg"} alt="" fill priority />
           </Link>
         </div>
-
         <div className="line z-[1]"></div>
         <div className="menu-list text-white px-[5.215vw] md:px-[8vw] bg-white bg-opacity-[0.04] z-[0]">
           <ul className="flex items-center gap-[36px] md:gap-12 md:py-10 text-sm md:text-base uppercase tracking-[2.7px] h-24 md:h-content">
