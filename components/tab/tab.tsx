@@ -15,7 +15,7 @@ interface TabProps {
 const Tab = ({ destinations, onPlanetSelect }: any) => {
   return (
     <div className="flex flex-col justify-center">
-      <ul className="flex gap-10">
+      <ul className="flex gap-10 items-center justify-center lg:justify-start">
         {destinations.map((item: any) => (
           <li
             key={item.planet}

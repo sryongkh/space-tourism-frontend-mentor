@@ -12,16 +12,16 @@ interface DestinationContentProps {
 }
 const DestinationContent = ({ destination }: any) => {
   return (
-    <div className="flex flex-col">
-      <h2 className="font-bellefair text-h2 uppercase my-9">
+    <div className="flex flex-col xs:px-10 lg:px-0">
+      <h2 className="font-bellefair text-h3 xs:text-h1-mobile lg:text-h2 text-center lg:text-start uppercase my-4 xs:my-8 lg:my-9">
         {destination.planet}
       </h2>
-      <p className="leading-8 text-purple text-bodytxt pb-7">
+      <p className="leading-8 text-purple text-bodytxt text-center lg:text-start pb-0 xs:pb-5 lg:pb-7">
         {destination.description}
       </p>
-      <hr className="my-7" />
-      <div className="w-full flex">
-        <div className="w-1/2 uppercase">
+      <div className="w-full h-[0.5px] bg-[#383B4B] my-7"></div>
+      <div className="w-full flex flex-col xs:flex-row gap-8">
+        <div className="w-full xs:w-1/2 uppercase flex flex-col items-center lg:items-start">
           <p className="label text-purple text-sm tracking-subheading mb-3">
             AVG. DISTANCE
           </p>
@@ -29,7 +29,7 @@ const DestinationContent = ({ destination }: any) => {
             {destination.avgdistance}
           </p>
         </div>
-        <div className="w-1/2 uppercase">
+        <div className="w-full xs:w-1/2 uppercase flex flex-col items-center lg:items-start">
           <p className="label text-purple text-sm tracking-subheading mb-3">
             Est. travel time
           </p>

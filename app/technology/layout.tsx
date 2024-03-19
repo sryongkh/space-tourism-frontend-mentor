@@ -7,7 +7,7 @@ export default function TechLayout({
 }>) {
   return (
     <>
-      <div className="w-full h-[80%] mt-[auto] px-[165px] pb-32">{children}</div>
+      <div className="w-screen h-screen overflow-hidden mt-[auto] px-[165px] pb-32">{children}</div>
     </>
   );
 }

@@ -7,7 +7,9 @@ export default function CrewLayout({
 }>) {
   return (
     <>
-      <div>{children}</div>
+      <div className="w-full h-[80%] mt-[auto] px-[165px] pb-32">
+        {children}
+      </div>
     </>
   );
 }

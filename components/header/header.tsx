@@ -21,29 +21,6 @@ const Header = () => {
         <div className="line z-[2]"></div>
         <div className="menu-list text-white px-[5.215vw] md:pr-[10vw] md:pl-[8vw] bg-white bg-opacity-[0.04] z-[1]">
           <ul className="flex items-center gap-[36px] md:gap-12 text-sm md:text-base uppercase tracking-[2.7px] h-24 md:h-content">
-            {/* {["home", "destination", "crew", "technology"].map(
-              (item: string, index: number) => {
-                let itempath = "";
-                itempath = item === "home" ? "/" : `/${item}`;
-                return (
-                  <li
-                    key={index}
-                    className={`min-w-max h-full flex items-center ${
-                      pathname.startsWith(itempath)
-                        ? classes.active
-                        : ""
-                    }`}
-                  >
-                    <Link
-                      href={itempath}
-                      className="menu-item flex gap-4 justify-center"
-                    >
-                      <span className="font-[700]">0{index}</span> {item}
-                    </Link>
-                  </li>
-                );
-              }
-            )} */}
             {["home", "destination", "crew", "technology"].map(
               (item: string, index: number) => {
                 let itempath = item === "home" ? "/" : `/${item}`;
