@@ -2,25 +2,28 @@
 import React from "react";
 import Link from "next/link";
 import classes from "./tab.module.css";
-export interface DestinationPath {
-  destination: string;
+interface Destination {
+  img: string;
+  planet: string;
+  description: string;
+  avgdistance: string;
+  travelTime: string;
 }
-const Tab = ({ destination }: DestinationPath) => {
+interface TabProps {
+  destinations: Destination[];
+}
+const Tab = ({ destinations, onPlanetSelect }: any) => {
   return (
     <div className="flex flex-col justify-center">
       <ul className="flex gap-10">
-        {["moon", "mars", "europa", "titan"].map((item, index) => {
-          return (
-            <div
-              key={index}
-              className={`flex justify-end items-center tracking-navtxt ${classes.active}`}
-            >
-              <li className="w-fit h-8 uppercase">
-                <Link href={"/"}>{item}</Link>
-              </li>
-            </div>
-          );
-        })}
+        {destinations.map((item: any) => (
+          <li
+            key={item.planet}
+            className="flex justify-end items-center tracking-navtxt w-fit h-8 uppercase cursor-pointer"
+          >
+            <a onClick={() => onPlanetSelect(item.planet)}>{item.planet}</a>
+          </li>
+        ))}
       </ul>
     </div>
   );
