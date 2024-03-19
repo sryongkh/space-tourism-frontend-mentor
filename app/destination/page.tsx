@@ -68,7 +68,7 @@ export default function DestinationPage() {
             )}
           </div>
         </div>
-        <div className="w-full lg:w-2/5 min-h-[445px] h-full flex flex-col pt-[8%] lg:pt-[10%] lg:pl-[5%]">
+        <div className="w-full lg:w-2/5 min-h-[445px] h-full flex flex-col pt-[8%] lg:pt-[10%] lg:pl-[3%]">
           <Tab destinations={destinations} onPlanetSelect={setSelectedPlanet} />
           {selectedDestination && (
             <DestinationContent destination={selectedDestination} />
