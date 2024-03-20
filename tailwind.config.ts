@@ -52,7 +52,7 @@ const config: Config = {
       },
       boxShadow: {
         "star": "0 8px 72px rgba(96, 96, 96, 0.1)"
-      }
+      },
     },
   },
   plugins: [],

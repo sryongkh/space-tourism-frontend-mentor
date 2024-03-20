@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import crews from "./crews.json";
+import { motion } from "framer-motion";
 export interface Crew {
   img: string;
   name: string;
@@ -12,9 +13,19 @@ export interface Crew {
 export default function CrewPage() {
   const pathname = usePathname();
   const [selectedCrewIndex, setSelectedCrewIndex] = React.useState(0);
+  const fadeInAnimation = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.5 },
+  };
   return (
     <>
-      <div className="flex w-[90%] xs:w-full lg:w-5/12 max-w-[60%] xs:max-w-[400px] lg:max-w-[700px] max-h-[834px] absolute right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-24 translate-y-[20%] xs:translate-y-0 bottom-1/2 xs:bottom-0 px-12 border-b-[0.5px] xs:border-b-0 border-[#383B4B]">
+      <motion.div
+        key={selectedCrewIndex}
+        {...fadeInAnimation}
+        className="flex w-[90%] xs:w-full lg:w-5/12 max-w-[60%] xs:max-w-[400px] lg:max-w-[700px] max-h-[834px] absolute right-1/2 translate-x-1/2 lg:translate-x-0 lg:right-24 translate-y-[20%] xs:translate-y-0 bottom-1/2 xs:bottom-0 px-12 border-b-[0.5px] xs:border-b-0 border-[#383B4B]"
+      >
         <Image
           src={crews[selectedCrewIndex].img}
           width={568}
@@ -23,7 +34,7 @@ export default function CrewPage() {
           className="w-full"
           priority
         ></Image>
-      </div>
+      </motion.div>
       <main className="relative w-full h-full lg:h-[80%] mt-[auto] px-6 xs:px-10 lg:px-[11.458vw] pt-24 xs:pt-36 lg:pt-0 flex flex-col lg:flex-row justify-start text-white">
         <div className="w-full h-full flex flex-col items-start justify-start relative z-[1]">
           <h5 className="text-base text-h5-tablet md:text-h5 tracking-navtxt xs:tracking-h5 uppercase text-center xs:text-start">
@@ -37,9 +48,7 @@ export default function CrewPage() {
               {crews[selectedCrewIndex].name}
             </h2>
             <p className="text-center lg:text-start text-base lg:text-bodytxt leading-8 max-w-[444px] text-purple">
-              Douglas Gerald Hurley is an American engineer, former Marine Corps
-              pilot and former NASA astronaut. He launched into space for the
-              third time as commander of Crew Dragon Demo-2.
+              {crews[selectedCrewIndex].information}
             </p>
             <div className="pagination flex justify-center lg:justify-start gap-4 lg:gap-6 py-8 lg:py-32 order-1">
               {crews.map((_, index) => (
@@ -63,6 +72,8 @@ export default function CrewPage() {
               src={"/bg-crew.png"}
               alt=""
               fill
+              objectFit="cover"
+              objectPosition="center center"
               sizes="(max-width: 768px) 100vw"
               className="flex mix-blend-lighten"
               priority
