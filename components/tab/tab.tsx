@@ -1,17 +1,6 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import classes from "./tab.module.css";
-interface Destination {
-  img: string;
-  planet: string;
-  description: string;
-  avgdistance: string;
-  travelTime: string;
-}
-interface TabProps {
-  destinations: Destination[];
-}
 const Tab = ({ destinations, onPlanetSelect }: any) => {
   return (
     <div className="flex flex-col justify-center">

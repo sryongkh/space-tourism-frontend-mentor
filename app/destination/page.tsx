@@ -4,7 +4,7 @@ import destinations from "./destination.json";
 import Image from "next/image";
 import gsap from "gsap";
 import Tab from "@/components/tab/tab";
-import DestinationContent from "@/components/destinyContent/destinyContent";
+import DestinationContent from "@/components/destinationContent/destinationContent";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -41,8 +41,9 @@ export default function DestinationPage() {
     <>
       <main className="w-full h-full lg:h-[80%] mt-[auto] px-6 xs:px-10 lg:px-[11.458vw] pt-24 xs:pt-36 lg:pt-0 pb-12 lg:pb-32 flex flex-col lg:flex-row text-white relative z-[0]">
         <div className="w-full lg:w-3/5">
-          <h5 className="text-h5-tablet md:text-h5 tracking-navtxt xs:tracking-h5 uppercase text-center xs:text-start">
-            <span className="font-bold opacity-25 mr-5">01</span> Pick your destination
+          <h5 className="text-base text-h5-tablet md:text-h5 tracking-navtxt xs:tracking-h5 uppercase text-center xs:text-start">
+            <span className="font-bold opacity-25 mr-5">01</span> Pick your
+            destination
           </h5>
           <div className="w-full h-full flex justify-center items-center mt-4 lg:mt-0">
             {selectedDestination ? (
