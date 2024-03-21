@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main className="w-full h-full text-white relative flex">
         <div className="main-content w-full h-full md:h-fit relative mt-auto flex flex-row justify-between items-center px-6 xs:px-[11.458vw] pb-12 xs:pb-24 xs:p-24">
-          <div className="mt-[20%] md:mt-0 flex flex-col items-center md:items-start gap-6 xs:w-[min-content] max-w-[450px]">
+          <div className="mt-[4rem] md:mt-0 flex flex-col items-center md:items-start gap-6 xs:w-[min-content] max-w-[450px]">
             <h5 className="text-base xs:text-xl md:text-h5 uppercase text-purple tracking-h5">
               SO, YOU WANT TO TRAVEL TO
             </h5>

@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlow.className} relative bg-[#0B0D17] w-screen h-screen overflow-hidden flex`}
+        className={`${barlow.className} relative bg-[#0B0D17] w-screen h-screen overflow-hidden flex flex-col`}
       >
         <Header />
         {children}
