@@ -46,7 +46,7 @@ const Header = () => {
                 return (
                   <li
                     key={index}
-                    className={`w-full min-w-max h-[2.5rem] xs:h-full flex items-center ${
+                    className={`w-full min-w-max h-[2.5rem] xs:h-full flex items-center hover:border-b-[3px] hover:border-[#ffffff25] transition-all ${
                       isActive ? classes.active : ""
                     }`}
                   >

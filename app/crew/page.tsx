@@ -54,7 +54,7 @@ export default function CrewPage() {
               {crews.map((_, index) => (
                 <div
                   key={index}
-                  className={`cursor-pointer w-[10px] lg:w-4 h-[10px] lg:h-4 rounded-full bg-white ${
+                  className={`cursor-pointer w-[10px] lg:w-4 h-[10px] lg:h-4 rounded-full bg-white transition-all hover:opacity-50 ${
                     index === selectedCrewIndex ? "opacity-100" : "opacity-25"
                   }`}
                   onClick={() => setSelectedCrewIndex(index)}
