@@ -18,7 +18,7 @@ function TechPage() {
               {tech.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-[60px] lg:w-20 h-[60px] lg:h-20 border-[0.5px] rounded-full font-bellefair text-2xl lg:text-[2rem] ${
+                  className={`w-[60px] lg:w-20 h-[60px] lg:h-20 border-[0.5px] border-[#ffffff25] hover:border-white rounded-full font-bellefair text-2xl lg:text-[2rem] flex justify-center items-center transition-all ${
                     index === selectedIndex
                       ? "text-black bg-white"
                       : "text-white bg-transparent"
